@@ -5,6 +5,6 @@ resource "google_monitoring_notification_channel" "main" {
     url = var.md_metadata.observability.alarm_webhook_url
   }
   user_labels = {
-    md-package = var.md_metadata.name_prefix
+    md-instance = var.md_metadata.default_tags["md-instance"]
   }
 }
